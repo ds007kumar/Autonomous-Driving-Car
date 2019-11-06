@@ -1,0 +1,19 @@
+Data Description
+Much of the Text was taken from the official page here
+This dataset contains photos of streets, taken from the roof of a car. We're attempting to predict the position and orientation of all un-masked cars in the test images. You should also provide a confidence score indicating how sure you are of your prediction.
+
+Pose Information (train.csv) Note that rotation values are angles expressed in radians, relative to the camera.
+
+The primary data is images of cars and related pose information. The pose information is formatted as strings, as follows: model type, yaw, pitch, roll, x, y, z
+
+A concrete example with two cars in the photo: 5 0.5 0.5 0.5 0.0 0.0 0.0 32 0.25 0.25 0.25 0.5 0.4 0.7
+
+Submissions (per sample_submission.csv) are very similar, with the addition of a confidence score, and the removal of the model type. You are not required to predict the model type of the vehicle in question.
+
+ID, PredictionString ID_1d7bc9b31,0.5 0.5 0.5 0.0 0.0 0.0 1.0 indicating that this prediction has a confidence score of 1.0.
+
+Other Data:
+
+Image Masks (test_masks.zip / train_masks.zip) Some cars in the images are not of interest (too far away, etc.). Binary masks are provided to allow competitors to remove them from consideration.
+
+Car Models 3D models of all cars of interest are available for download as pickle files - they can be compared against cars in images, used as references for rotation, etc.
